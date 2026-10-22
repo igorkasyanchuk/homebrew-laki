@@ -4,7 +4,10 @@
 worktree. A Mac app, signed and notarized.
 
 ```bash
-brew install --cask igorkasyanchuk/laki/laki
+brew install --cask igorkasyanchuk/laki/laki    # Laki.app in /Applications
+brew upgrade --cask laki                        # a new version (quit Laki first)
+brew uninstall --cask laki                      # --zap also removes its settings; ~/.laki stays
 ```
 
-`brew upgrade --cask laki` gets each new version: the cask here follows every release.
+The cask here follows every release. `~/.laki` holds your workspaces' worktrees and Laki's state, so no uninstall
+removes it.
