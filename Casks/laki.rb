@@ -1,6 +1,6 @@
 cask "laki" do
-  version "0.25.0"
-  sha256 "e70e6e9eb20a35e40e1040fbc53e35120af1ed7194d94ddbccc5189bdabb7091"
+  version "0.26.0"
+  sha256 "30a17a80df6666fb604bca31fe5de0c4c44cdb6e6fb9155129426dce195cc224"
 
   url "https://github.com/igorkasyanchuk/laki-releases/releases/download/v#{version}/Laki-#{version}-arm64.dmg"
   name "Laki"
