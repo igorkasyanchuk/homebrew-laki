@@ -1,16 +1,19 @@
 cask "laki" do
-  version "0.27.0"
-  sha256 "0e20b11bb87ff7df6135f93d360f36d55a0be490101b6e8b92fec75e3723a495"
+  version "0.28.0"
+  sha256 "8520f82d239f2998b97a1ec02ae6b5f6881194b0ccd3b1ac1007c2ffa2a9f747"
 
   url "https://github.com/igorkasyanchuk/laki-releases/releases/download/v#{version}/Laki-#{version}-arm64.dmg"
   name "Laki"
   desc "Runs coding agents side by side, each task in its own git worktree"
-  homepage "https://github.com/igorkasyanchuk/laki-releases"
+  homepage "https://laki.sh"
 
+  auto_updates true
   depends_on arch: :arm64
-  depends_on :macos
+  depends_on macos: ">= :ventura"
 
   app "Laki.app"
+
+  uninstall quit: "dev.laki.app"
 
   zap trash: [
     "~/Library/Application Support/Laki",
